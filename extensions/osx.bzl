@@ -82,6 +82,9 @@ def _osx_extension_impl(mctx):
     for library in libraries:
         includes.append("usr/lib/%s*" % library)
 
+    includes.append("SDKSettings.json")
+    includes.append("SDKSettings.plist")
+
     for framework in frameworks:
         includes.append("System/Library/Frameworks/%s.framework/*" % framework)
         includes.append("System/Library/PrivateFrameworks/%s.framework/*" % framework)
